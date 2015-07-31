@@ -1,0 +1,18 @@
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[user]
+	name = Evan Fosmark
+	email = evan.fosmark@gmail.com
+[rerere]
+	enabled = true
+[push]
+	default = simple
+[alias]
+	lg = log --pretty --oneline --graph --decorate
+	amend = commit --amend -C HEAD
+	unstage = reset HEAD --
+	co = checkout
+	st = status
+	reopen = reset --soft HEAD~1
+	ru = remote update
