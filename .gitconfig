@@ -16,3 +16,7 @@
 	st = status
 	reopen = reset --soft HEAD~1
 	ru = remote update
+	current = rev-parse --abbrev-ref HEAD
+	latest-tag = !git describe --tags `git rev-list --tags --max-count=1`
+[help]
+	autocorrect = 20
