@@ -16,7 +16,7 @@
 	st = status
 	reopen = reset --soft HEAD~1
 	ru = remote update
-	current = rev-parse --abbrev-ref HEAD
+	cur-branch = rev-parse --abbrev-ref HEAD
 	latest-tag = !git describe --tags `git rev-list --tags --max-count=1`
-[help]
-	autocorrect = 20
+	slash-and-burn = "!git ru && git reset --hard origin/`git cur-branch`"
+	push-up = !git push -u origin `git cur-branch`
